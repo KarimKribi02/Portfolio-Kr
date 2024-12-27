@@ -1,12 +1,13 @@
 import React from 'react'
 import {RiReactjsLine} from 'react-icons/ri'
-import {TbBrandNextjs} from 'react-icons/tb'
+import { DiJavascript1 } from "react-icons/di";
 import {SiMongodb} from 'react-icons/si'
-import {DiRedis} from 'react-icons/di'
-import {FaNodeJs} from 'react-icons/fa'
-import {BiLogoPostgresql} from 'react-icons/bi'
+import { DiPhp } from "react-icons/di";
+import { DiBootstrap } from "react-icons/di";
+import { DiCss3 } from "react-icons/di";
 import { motion } from "motion/react"
-import { animate } from 'motion'
+import { DiGithubBadge } from "react-icons/di";
+// import { animate } from 'motion'
 const iconVariants = (duration) => ({
   initial:{y: -10},
   animate: {y:[10, -10], 
@@ -38,7 +39,7 @@ const Technologies = () => {
         initial="initial"
         animate="animate"
          className='rounded-2xl border border-neutral-800 p-4'>
-            <TbBrandNextjs className='text-7xl'/>
+            <DiGithubBadge className='text-7xl'/>
         </motion.div>
         <motion.div
         variants={iconVariants(5)}
@@ -52,21 +53,28 @@ const Technologies = () => {
         initial="initial"
         animate="animate"
          className='rounded-2xl border border-neutral-800 p-4'>
-            <DiRedis className='text-7xl text-red-700'/>
+            <DiJavascript1 className='text-7xl '/>
         </motion.div>
         <motion.div
         variants={iconVariants(6)}
         initial="initial"
         animate="animate"
          className='rounded-2xl border border-neutral-800 p-4'>
-            <FaNodeJs className='text-7xl text-green-500'/>
+            <DiPhp className='text-7xl '/>
         </motion.div>
         <motion.div
         variants={iconVariants(4)}
         initial="initial"
         animate="animate"
          className='rounded-2xl border border-neutral-800 p-4'>
-            <BiLogoPostgresql className='text-7xl text-sky-700'/>
+            <DiBootstrap className='text-7xl text-purple-600'/>
+        </motion.div>
+        <motion.div
+        variants={iconVariants(8)}
+        initial="initial"
+        animate="animate"
+         className='rounded-2xl border border-neutral-800 p-4'>
+            <DiCss3 className='text-7xl text-yellow-400'/>
         </motion.div>
       </motion.div>
     </div>
