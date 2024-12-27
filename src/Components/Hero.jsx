@@ -40,7 +40,7 @@ function Hero() {
                 initial={{x: 100, opacity: 0}} 
                 animate={{x: 0, opacity: 1}}
                 transition={{duration: 1, delay: 1.2}}
-                 className="" src="./KarimPic.jpg" alt="profilePic" />
+                 className="" src="../KarimPic.jpg" alt="profilePic" />
               </div>
             </div>
         </div>
