@@ -8,6 +8,7 @@ import Experience from "./Components/Experience.jsx";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Projects from "./Components/Projects.jsx";
+import ContactForm from "./Components/ContactForm";
 function App() {
   return (
     <div className="overflow-x-hidden text-neutral-300 antialiased slec selection:bg-cyan-300 selection:text-cyan-900">
@@ -22,7 +23,7 @@ function App() {
         <Experience/>
         <Projects/>
 
-        
+        <ContactForm/>
         <Contact/>
       </div>
     
