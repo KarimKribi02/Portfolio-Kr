@@ -63,7 +63,7 @@ export const PROJECTS = [
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
     technologies: ["React.js", "Tailwind", "Motion",],
-    link: "portfolio-kr.vercel.app",
+    link: "https://portfolio-kr.vercel.app/",
   },
   // {
   //   title: "Blogging Platform",
