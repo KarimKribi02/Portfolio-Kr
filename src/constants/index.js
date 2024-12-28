@@ -1,6 +1,7 @@
 import project1 from "../assets/projects/DriveGo.jpeg";
 import project2 from "../assets/projects/Ruby.png";
 import project5 from "../assets/projects/Kr.png";
+import { link } from "motion/react-client";
 
 export const HERO_CONTENT = `Technicien spécialisé en systèmes automatisés et développement Digital, spécialisé en HTML, CSS, JavaScript, REACT JS, ainsi qu'en technologies back-end telles que PHP, LARAVEL et SQL. Je suis curieux, dynamique, enthousiaste et désireux de compléter ma formation et de relever de nouveaux défis. `;
 
@@ -44,8 +45,8 @@ export const PROJECTS = [
     image: project1,
     description:
       "Projet DriveGo consiste à développer une plateforme web de location de voitures.",
-
     technologies: ["PHP", "Tailwind", "React.js", "MySQL",],
+    link: "https://grive-go.vercel.app/",
   },
   {
     title: "Site Web Ruby Store",
@@ -53,6 +54,8 @@ export const PROJECTS = [
     description:
       "Conception et réalisation d’une boutique E-commerce.",
     technologies: ["HTML", "CSS", "JavaScript", " Bootstrap"],
+    link: "https://ruby-store-orpin.vercel.app/index.html",  
+
   },
   {
     title: "Portfolio Website",
@@ -60,6 +63,7 @@ export const PROJECTS = [
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
     technologies: ["React.js", "Tailwind", "Motion",],
+    link: "portfolio-kr.vercel.app",
   },
   // {
   //   title: "Blogging Platform",
