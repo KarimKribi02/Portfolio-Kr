@@ -10,10 +10,15 @@ const Navbar = () => {
             <img className="mx-2 w-10" src="./kevinRushLogo.png" alt="logo" />
         </div> 
         <div className="m-8 flex items-center justify-center gap-4 text-2xl">
-            <FaLinkedin/>
+        <a href="https://www.linkedin.com/in/mohamed-karim-kribi-31b30b248/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin />
+        </a>
+        <a href="https://github.com/KarimKribi02" target="_blank" rel="noopener noreferrer">
             <FaGithub/>
-            <FaSquareXTwitter/>
+        </a>
+          <a href="https://www.instagram.com/krm_02/" target="_blank" rel="noopener noreferrer">
             <FaInstagram/>
+          </a>
         </div>
     </nav>
   )

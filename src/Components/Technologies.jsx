@@ -4,9 +4,10 @@ import { DiJavascript1 } from "react-icons/di";
 import {SiMongodb} from 'react-icons/si'
 import { DiPhp } from "react-icons/di";
 import { DiBootstrap } from "react-icons/di";
-import { DiCss3 } from "react-icons/di";
+import { DiMysql } from "react-icons/di";
 import { motion } from "motion/react"
 import { DiGithubBadge } from "react-icons/di";
+import { DiPython } from "react-icons/di";
 // import { animate } from 'motion'
 const iconVariants = (duration) => ({
   initial:{y: -10},
@@ -74,7 +75,14 @@ const Technologies = () => {
         initial="initial"
         animate="animate"
          className='rounded-2xl border border-neutral-800 p-4'>
-            <DiCss3 className='text-7xl text-yellow-400'/>
+            <DiMysql className='text-7xl text-blue-800'/>
+        </motion.div>
+        <motion.div
+        variants={iconVariants(8)}
+        initial="initial"
+        animate="animate"
+         className='rounded-2xl border border-neutral-800 p-4'>
+            <DiPython className='text-7xl'/>
         </motion.div>
       </motion.div>
     </div>

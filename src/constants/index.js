@@ -1,7 +1,6 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
+import project1 from "../assets/projects/DriveGo.jpeg";
+import project2 from "../assets/projects/Ruby.png";
+import project5 from "../assets/projects/Kr.png";
 
 export const HERO_CONTENT = `Technicien spécialisé en systèmes automatisés et développement Digital, spécialisé en HTML, CSS, JavaScript, REACT JS, ainsi qu'en technologies back-end telles que PHP, LARAVEL et SQL. Je suis curieux, dynamique, enthousiaste et désireux de compléter ma formation et de relever de nouveaux défis. `;
 
@@ -57,7 +56,7 @@ export const PROJECTS = [
   },
   {
     title: "Portfolio Website",
-    image: project3,
+    image: project5,
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
     technologies: ["React.js", "Tailwind", "Motion",],

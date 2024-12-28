@@ -1,6 +1,7 @@
 import React from 'react'
 import { ABOUT_TEXT } from '../constants'
 import { motion } from "motion/react"
+import { FaDownload } from 'react-icons/fa';
 
 const About = () => {
   return (
@@ -26,8 +27,18 @@ const About = () => {
                     <div className='flex justify-center lg:justify-start'>
                         <p className='my-2 max-w-xl py-6'>{ABOUT_TEXT}</p>
                     </div>
+            <a
+              href="./MyCV.pdf"
+              download
+              className="mt-6 flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-300 transform hover:scale-105 
+              px-6 py-3 text-sm md:px-8 md:py-4 md:text-base lg:px-10 lg:py-5 lg:text-lg">
+              <FaDownload className="text-lg md:text-xl lg:text-2xl" />
+              Télécharger le CV
+            </a>
             </motion.div>
+            
         </div>
+       
     </div>
   )
 }
