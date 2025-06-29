@@ -21,17 +21,29 @@ function Hero() {
                   variants={container(0)}
                   initial="hidden"
                   animate="visible"
-                  className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl">Mohamedkarim Kribi</motion.h1>
+                  className="pb-16 text-6xl font-thin tracking-tight text-[#ECDFCC] lg:mt-16 lg:text-8xl"
+                >
+                  Mohamedkarim Kribi
+                </motion.h1>
+
                  <motion.span
-                 variants={container(0.5)}
-                 initial="hidden"
-                 animate="visible"
-                  className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent">Développeur Full Stack</motion.span>  
+                  variants={container(0.5)}
+                  initial="hidden"
+                  animate="visible"
+                  className="text-3xl tracking-tight"
+                  style={{ color: "#697565" }}
+                >
+                  Développeur Full Stack
+                </motion.span>
                  <motion.p 
-                 variants={container(1)}
-                 initial="hidden"
-                 animate="visible"
-                 className="my-2 max-w-xl py-6 font-light tracking-tighter">{HERO_CONTENT}</motion.p> 
+                  variants={container(1)}
+                  initial="hidden"
+                  animate="visible"
+                  className="my-2 max-w-xl py-6 font-light tracking-tighter text-[#ECDFCC]"
+                >
+                  {HERO_CONTENT}
+                </motion.p>
+
                 </div>
             </div>
             <div className="w-full lg:w-1/2 lg:p-8">
@@ -40,7 +52,7 @@ function Hero() {
                 initial={{x: 100, opacity: 0}} 
                 animate={{x: 0, opacity: 1}}
                 transition={{duration: 1, delay: 1.2}}
-                 className="" src="../KarimPic.png" alt="profilePic" />
+                 className="rounded-3xl" src="../KarimPic.png" alt="profilePic" />
               </div>
             </div>
         </div>
