@@ -4,7 +4,7 @@ import Hero from "./Components/Hero";
 import Technologies from "./Components/Technologies.jsx";
 import Experience from "./Components/Experience.jsx";
 import About from "./Components/About";
-import Contact from "./Components/Contact";
+
 import Projects from "./Components/Projects.jsx";
 import ContactForm from "./Components/ContactForm";
 
@@ -27,7 +27,7 @@ function App() {
         <Experience />
         <Projects />
         <ContactForm />
-        <Contact />
+        
       </div>
     </div>
   );

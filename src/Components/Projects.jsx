@@ -4,61 +4,104 @@ import { motion } from 'motion/react';
 
 function Projects() {
   return (
-    <div className="border-b border-neutral-900 pb-4">
+    <div className="pb-16" style={{ backgroundColor: '#181C14' }}>
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
-        className="my-20 text-center text-4xl"
+        className="pt-20 pb-12 text-center text-4xl font-bold"
+        style={{ color: '#ECDFCC' }}
       >
         Projects
       </motion.h2>
-      <div>
-        {PROJECTS.map((project, index) => (
-          <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
+      
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {PROJECTS.map((project, index) => (
             <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -100 }}
-              transition={{ duration: 1 }}
-              className="w-full lg:w-1/4"
+              key={index}
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ 
+                y: -10,
+                transition: { duration: 0.3 }
+              }}
+              className="rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl flex flex-col h-full"
+              style={{ backgroundColor: '#3C3D37' }}
             >
-              <img
-                src={project.image}
-                alt={project.title}
-                width={150}
-                height={150}
-                className="mb-6 rounded"
-              />
-            </motion.div>
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: 100 }}
-              transition={{ duration: 1 }}
-              className="w-full max-w-xl lg:w-3/4"
-            >
-              <h6 className="mb-2 font-semibold">{project.title}</h6>
-              <p className="mb-4 text-neutral-400">{project.description}</p>
-              <div className="mb-4">
-                {project.technologies.map((tech, index) => (
-                  <span
-                    key={index}
-                    className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800"
-                  >
-                    {tech}
-                  </span>
-                ))}
+              {/* Image Container */}
+              <div className="relative overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
+                />
+                <div 
+                  className="absolute inset-0 opacity-0 hover:opacity-20 transition-opacity duration-300"
+                  style={{ backgroundColor: '#697565' }}
+                ></div>
               </div>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block rounded bg-blue-600 px-4 py-2 text-white font-semibold shadow-md hover:bg-blue-500 transition-all duration-300"
-              >
-                Demo
-              </a>
+              
+              {/* Card Content */}
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 
+                  className="text-xl font-bold mb-3"
+                  style={{ color: '#ECDFCC' }}
+                >
+                  {project.title}
+                </h3>
+                
+                <p 
+                  className="text-sm mb-4 leading-relaxed flex-grow"
+                  style={{ color: '#ECDFCC', opacity: 0.8 }}
+                >
+                  {project.description}
+                </p>
+                
+                {/* Technologies Tags */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.technologies.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="px-3 py-1 text-xs font-medium rounded-full transition-all duration-200 hover:scale-105"
+                      style={{ 
+                        backgroundColor: '#697565',
+                        color: '#ECDFCC'
+                      }}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                
+                {/* Demo Button */}
+                <div className="flex justify-center mt-auto">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg transform"
+                    style={{ 
+                      backgroundColor: '#697565',
+                      color: '#ECDFCC'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = '#ECDFCC';
+                      e.target.style.color = '#3C3D37';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = '#697565';
+                      e.target.style.color = '#ECDFCC';
+                    }}
+                  >
+                    View Demo
+                  </a>
+                </div>
+              </div>
             </motion.div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

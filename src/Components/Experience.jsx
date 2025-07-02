@@ -1,37 +1,118 @@
 import React from 'react'
 import {EXPERIENCES} from '../constants'
 import { motion } from "motion/react"
+
 const Experience = () => {
   return (
-    <div className='border-b border-neutral-900 pb-4'>
-        <motion.h2 
+    <div className='pb-16' style={{ backgroundColor: '#181C14' }}>
+      <motion.h2 
         whileInView={{opacity: 1, y: 0}}
         initial={{opacity: 0, y: -100}}
         transition={{duration: 0.5}}
-        className='my-20 text-center text-4xl'>Experiences</motion.h2>
-      <div>{EXPERIENCES.map((exp, index) => (
-      <div key={index} className='mb-8 flex flex-wrap lg:justify-center'>
-        <motion.div
-        whileInView={{opacity: 1, x: 0}}
-        initial={{opacity: 0, x: -100}} 
-        transition={{duration: 1}}
-         className='w-full lg:w-1/4'>
-            <p className='mb-2 text-sm text-neutral-400'>{exp.year}</p>
-        </motion.div>
-        <motion.div
-        whileInView={{opacity: 1, x: 0}}
-        initial={{opacity: 0, x: 100}} 
-        transition={{duration: 1}}
-         className='w-full max-w-xl lg:w-3/4'>
-            <h6 className='mb-2 font-semibold'>{exp.role} - <span className='text-sm text-purple-100'>{exp.company}</span></h6>
-            <p mb-4 text-neutral-400>{exp.description}</p>
-            {exp.technologies.map((tech,index)=>{
-                return <span key={index} className='mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800'>{tech}</span>
-            })}
-        </motion.div>
-      </div>
+        className='pt-20 pb-12 text-center text-4xl font-bold'
+        style={{ color: '#ECDFCC' }}
+      >
+        Experiences
+      </motion.h2>
       
-      ))}</div>
+      <div className="container mx-auto px-6">
+        <div className="relative">
+          {/* Timeline Line */}
+          <div 
+            className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full hidden lg:block"
+            style={{ backgroundColor: '#697565' }}
+          ></div>
+          
+          {EXPERIENCES.map((exp, index) => (
+            <motion.div 
+              key={index} 
+              whileInView={{opacity: 1, y: 0}}
+              initial={{opacity: 0, y: 50}}
+              transition={{duration: 0.6, delay: index * 0.1}}
+              className={`mb-12 flex flex-col lg:flex-row items-center ${
+                index % 2 === 0 ? 'lg:flex-row-reverse' : ''
+              }`}
+            >
+              {/* Timeline Dot */}
+              <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 z-10">
+                <div 
+                  className="w-4 h-4 rounded-full border-4"
+                  style={{ 
+                    backgroundColor: '#ECDFCC',
+                    borderColor: '#697565'
+                  }}
+                ></div>
+              </div>
+              
+              {/* Experience Card */}
+              <div className={`w-full lg:w-5/12 ${index % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8'}`}>
+                <motion.div
+                  whileHover={{ 
+                    scale: 1.02,
+                    transition: { duration: 0.3 }
+                  }}
+                  className="rounded-xl p-6 shadow-lg transition-all duration-300 hover:shadow-2xl"
+                  style={{ backgroundColor: '#3C3D37' }}
+                >
+                  {/* Year Badge */}
+                  <div className="mb-4">
+                    <span 
+                      className="inline-block px-4 py-2 rounded-full text-sm font-semibold"
+                      style={{ 
+                        backgroundColor: '#697565',
+                        color: '#ECDFCC'
+                      }}
+                    >
+                      {exp.year}
+                    </span>
+                  </div>
+                  
+                  {/* Role and Company */}
+                  <h3 
+                    className="text-xl font-bold mb-2"
+                    style={{ color: '#ECDFCC' }}
+                  >
+                    {exp.role}
+                  </h3>
+                  <h4 
+                    className="text-lg font-medium mb-4"
+                    style={{ color: '#697565' }}
+                  >
+                    {exp.company}
+                  </h4>
+                  
+                  {/* Description */}
+                  <p 
+                    className="text-sm mb-6 leading-relaxed"
+                    style={{ color: '#ECDFCC', opacity: 0.8 }}
+                  >
+                    {exp.description}
+                  </p>
+                  
+                  {/* Technologies */}
+                  <div className="flex flex-wrap gap-2">
+                    {exp.technologies.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-3 py-1 text-xs font-medium rounded-full transition-all duration-200 hover:scale-105"
+                        style={{ 
+                          backgroundColor: '#697565',
+                          color: '#ECDFCC'
+                        }}
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </motion.div>
+              </div>
+              
+              {/* Empty space for timeline balance */}
+              <div className="hidden lg:block w-5/12"></div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }
