@@ -114,29 +114,31 @@ function ContactForm() {
               
               {/* Email */}
               <motion.div 
-                whileHover={{ scale: 1.02 }}
-                className='flex items-start space-x-4 p-4 rounded-lg transition-all duration-300'
-                style={{ backgroundColor: 'rgba(105, 117, 101, 0.3)' }}
-              >
-                <div 
-                  className='w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0'
-                  style={{ backgroundColor: '#697565' }}
-                >
-                  <svg className='w-6 h-6' fill='#ECDFCC' viewBox='0 0 24 24'>
-                    <path d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/>
-                  </svg>
-                </div>
-                <div>
-                  <h4 className='font-semibold mb-1' style={{ color: '#ECDFCC' }}>Email</h4>
-                  <a 
-                    href={`mailto:${CONTACT.email}`}
-                    className='text-sm transition-all duration-300 hover:underline'
-                    style={{ color: '#ECDFCC', opacity: 0.8 }}
-                  >
-                    {CONTACT.email}
-                  </a>
-                </div>
-              </motion.div>
+  whileHover={{ scale: 1.02 }}
+  className='flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 rounded-lg transition-all duration-300'
+  style={{ backgroundColor: 'rgba(105, 117, 101, 0.3)' }}
+>
+  <div 
+    className='w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center flex-shrink-0'
+    style={{ backgroundColor: '#697565' }}
+  >
+    <svg className='w-5 h-5 sm:w-6 sm:h-6' fill='#ECDFCC' viewBox='0 0 24 24'>
+      <path d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/>
+    </svg>
+  </div>
+  <div className='flex-1 min-w-0'>
+    <h4 className='font-semibold mb-1 text-sm sm:text-base' style={{ color: '#ECDFCC' }}>
+      Email
+    </h4>
+    <a 
+      href={`mailto:${CONTACT.email}`}
+      className='text-xs sm:text-sm transition-all duration-300 hover:underline break-all'
+      style={{ color: '#ECDFCC', opacity: 0.8 }}
+    >
+      {CONTACT.email}
+    </a>
+  </div>
+</motion.div>
             </div>
 
             {/* Social Links */}

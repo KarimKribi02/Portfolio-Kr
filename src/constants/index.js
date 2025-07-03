@@ -1,6 +1,7 @@
 import project1 from "../assets/projects/DriveGo.jpeg";
 import project2 from "../assets/projects/Ruby.png";
-import project5 from "../assets/projects/Kr.png";
+import project3 from "../assets/projects/AgroConnect.png";
+import project4 from "../assets/projects/TrainHub..png";
 import { link } from "motion/react-client";
 
 export const HERO_CONTENT = `Technicien spécialisé en systèmes automatisés et développement Digital, spécialisé en HTML, CSS, JavaScript, REACT JS, ainsi qu'en technologies back-end telles que PHP, LARAVEL et SQL. Je suis curieux, dynamique, enthousiaste et désireux de compléter ma formation et de relever de nouveaux défis. `;
@@ -10,34 +11,35 @@ Je suis un développeur full stack dévoué et polyvalent, passionné par la cr�
 
 export const EXPERIENCES = [
   {
-    year: "2024 - Present",
+    year: "2024 - 2025",
+    role: "Chef de projet & Développeur Full Stack",
+    company: "Projet AgroConnect",
+    description: `Gestion et pilotage du développement d’une plateforme numérique reliant directement les producteurs agricoles aux consommateurs finaux. Supervision de toutes les phases du projet, de la planification au déploiement, en assurant le respect des délais et des besoins des utilisateurs.`,
+    technologies: ["Laravel Blade", "Laravel", "MySQL", "Tailwind CSS"]
+  },
+  {
+    year: "2024 - 2025",
+    role: "Lead Développeur Frontend",
+    company: "Projet TrainHub - OFPPT",
+    description: `Encadrement de l’équipe frontend pour la conception et le développement d’une plateforme digitale dédiée à la gestion des formations des formateurs de l’OFPPT. Collaboration étroite avec les développeurs backend et les designers UI/UX pour assurer une intégration fluide et une expérience utilisateur optimale.`,
+    technologies: ["React.js", "Tailwind CSS", "Laravel", "MySQL"]
+  },
+  {
+    year: "2024 - 2025",
     role: "Product Owner",
     company: "OFPPT",
-    description: `le porte-parole des parties prenantes et des utilisateurs finaux. Il définit la vision du produit et veille à ce que l’équipe Scrum travaille sur les fonctionnalités les plus prioritaires.`,
-    technologies: ["Tailwind", "React.js", "PHP", "MySQL"],
+    description: `Représentant des parties prenantes et des utilisateurs finaux. Définit la vision du produit et veille à ce que l’équipe Scrum se concentre sur les fonctionnalités les plus prioritaires.`,
+    technologies: ["Tailwind", "React.js", "PHP", "MySQL"]
   },
   {
     year: "2023 - 2024",
-    role: "Frontend Developer",
+    role: "Développeur Frontend",
     company: "OFPPT",
-    description: `Designed and developed user interfaces for web applications using JavaScript and HTML/CSS.`,
-    technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-  },
-  // {
-  //   year: "2021 - 2022",
-  //   role: "Full Stack Developer",
-  //   company: "Facebook",
-  //   description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-  //   technologies: ["Python", "Svelte", "Three.js", "Postgres"],
-  // },
-  // {
-  //   year: "2020 - 2021",
-  //   role: "Software Engineer",
-  //   company: "Paypal",
-  //   description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-  //   technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
-  // },
+    description: `Conception et développement des interfaces utilisateur pour des applications web en utilisant JavaScript et HTML/CSS.`,
+    technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"]
+  }
 ];
+
 
 export const PROJECTS = [
   {
@@ -57,21 +59,22 @@ export const PROJECTS = [
     link: "https://ruby-store-orpin.vercel.app/index.html",  
 
   },
-  {
-    title: "Portfolio Website",
-    image: project5,
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["React.js", "Tailwind", "Motion",],
-    link: "https://portfolio-kr.vercel.app/",
-  },
-  // {
-  //   title: "Blogging Platform",
-  //   image: project4,
-  //   description:
-  //     "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-  //   technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
-  // },
+ {
+  title: "Site Web AgroConnect",
+  image: project3,
+  description:
+    "Conception et développement d’une plateforme numérique reliant les producteurs agricoles aux consommateurs finaux.",
+  technologies: ["Laravel Blade", "Laravel", "MySQL", "Tailwind CSS"],
+  link: "https://ton-lien-vers-le-projet.com"
+},
+ {
+  title: "Site Web TrainHub",
+  image: project4,
+  description:
+    "Conception et développement d’une plateforme digitale dédiée à la gestion des formations des formateurs de l’OFPPT.",
+  technologies: ["React.js", "Laravel", "MySQL", "Tailwind CSS"],
+  link: "https://ton-lien-vers-le-projet.com"
+}
 ];
 
 export const CONTACT = {
