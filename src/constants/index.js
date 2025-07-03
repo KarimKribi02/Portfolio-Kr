@@ -47,34 +47,37 @@ export const PROJECTS = [
     image: project1,
     description:
       "Projet DriveGo consiste à développer une plateforme web de location de voitures.",
-    technologies: ["PHP", "Tailwind", "React.js", "MySQL",],
+    technologies: ["PHP", "Tailwind", "React.js", "MySQL"],
     link: "https://grive-go.vercel.app/",
+    github: "https://github.com/KarimKribi02/GriveGo" // Ajoutez votre lien GitHub
   },
   {
     title: "Site Web Ruby Store",
     image: project2,
     description:
-      "Conception et réalisation d’une boutique E-commerce.",
-    technologies: ["HTML", "CSS", "JavaScript", " Bootstrap"],
-    link: "https://ruby-store-orpin.vercel.app/index.html",  
-
+      "Conception et réalisation d'une boutique E-commerce.",
+    technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+    link: "https://ruby-store-orpin.vercel.app/index.html",
+    github: "https://github.com/KarimKribi02/Ruby-Store" // Ajoutez votre lien GitHub
   },
- {
-  title: "Site Web AgroConnect",
-  image: project3,
-  description:
-    "Conception et développement d’une plateforme numérique reliant les producteurs agricoles aux consommateurs finaux.",
-  technologies: ["Laravel Blade", "Laravel", "MySQL", "Tailwind CSS"],
-  link: "https://ton-lien-vers-le-projet.com"
-},
- {
-  title: "Site Web TrainHub",
-  image: project4,
-  description:
-    "Conception et développement d’une plateforme digitale dédiée à la gestion des formations des formateurs de l’OFPPT.",
-  technologies: ["React.js", "Laravel", "MySQL", "Tailwind CSS"],
-  link: "https://ton-lien-vers-le-projet.com"
-}
+  {
+    title: "Site Web AgroConnect",
+    image: project3,
+    description:
+      "Conception et développement d'une plateforme numérique reliant les producteurs agricoles aux consommateurs finaux.",
+    technologies: ["Laravel Blade", "Laravel", "MySQL", "Tailwind CSS"],
+    video: "https://drive.google.com/file/d/1G38bWVCRazok2kVIjljfKCNQpsHaPNTl/preview", // Vidéo au lieu du lien
+    github: "https://github.com/KarimKribi02/AgroConnect" // Ajoutez votre lien GitHub
+  },
+  {
+    title: "Site Web TrainHub",
+    image: project4,
+    description:
+      "Conception et développement d'une plateforme digitale dédiée à la gestion des formations des formateurs de l'OFPPT.",
+    technologies: ["React.js", "Laravel", "MySQL", "Tailwind CSS"],
+    video: "https://drive.google.com/file/d/1xC6E9EoAFZ4QMahqf7A7qzCgqUeJmSRA/preview", // Vidéo au lieu du lien
+    github: "https://github.com/KarimKribi02/ofppt-trainhub" // Ajoutez votre lien GitHub
+  }
 ];
 
 export const CONTACT = {
