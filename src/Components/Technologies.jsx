@@ -7,7 +7,10 @@ import { DiBootstrap } from "react-icons/di"
 import { DiMysql } from "react-icons/di"
 import { motion } from "framer-motion"
 import { DiGithubBadge } from "react-icons/di"
-import { DiPython } from "react-icons/di"
+import { SiTailwindcss } from "react-icons/si"
+import { DiLaravel } from "react-icons/di"
+import { SiFigma } from "react-icons/si"
+import { SiPostman } from "react-icons/si"
 
 const iconVariants = (duration) => ({
   initial: { y: -10 },
@@ -54,7 +57,10 @@ const Technologies = () => {
     { icon: DiBootstrap, color: "#7952B3", name: "Bootstrap", duration: 6 },
     { icon: DiMysql, color: "#4479A1", name: "MySQL", duration: 4 },
     { icon: DiGithubBadge, color: "#ECDFCC", name: "GitHub", duration: 3.5 },
-    { icon: DiPython, color: "#3776AB", name: "Python", duration: 2.8 }
+    { icon: SiTailwindcss, color: "#06B6D4", name: "Tailwind", duration: 2.8 },
+    { icon: DiLaravel, color: "#FF2D20", name: "Laravel", duration: 4.2 },
+    { icon: SiFigma, color: "#F24E1E", name: "Figma", duration: 3.7 },
+    { icon: SiPostman, color: "#FF6C37", name: "Postman", duration: 2.3 }
   ]
 
   return (
@@ -92,7 +98,7 @@ const Technologies = () => {
         variants={containerVariants}
         initial="initial"
         animate="animate"
-        className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 max-w-4xl mx-auto"
+        className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 max-w-6xl mx-auto"
       >
         {technologies.map((tech, index) => (
           <motion.div

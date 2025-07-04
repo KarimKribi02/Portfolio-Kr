@@ -101,10 +101,10 @@ const About = () => {
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div 
-                  className="w-1 h-16 rounded-full mt-2"
+                  className="w-1 h-16 rounded-full mt-2 hidden lg:block"
                   style={{ backgroundColor: '#697565' }}
                 ></div>
-                <div>
+                <div className='lg:text-left text-center'>
                   <h3 className="text-2xl font-semibold mb-3" style={{ color: '#ECDFCC' }}>
                     Mon Histoire
                   </h3>
@@ -157,7 +157,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="pt-4"
+              className="pt-4 text-center lg:text-left"
             >
               <a
                 href="./MyCV.pdf"
