@@ -61,12 +61,12 @@ function Hero() {
               className="space-y-2"
             >
               <p className="text-base sm:text-lg font-medium tracking-wide" style={{ color: '#697565' }}>
-                Bonjour, je suis
+                Hi, I am
               </p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight" style={{ color: '#ECDFCC' }}>
-                Mohamedkarim
+                Mohamed Karim
                 <br />
-                <span style={{ color: '#697565' }}>Kribi</span>
+                <span style={{ color: '#697565' }}>KRIBI</span>
               </h1>
             </motion.div>
 
@@ -77,7 +77,7 @@ function Hero() {
               <div className="flex items-center space-x-3 justify-center lg:justify-start">
                 <div className="w-8 sm:w-12 h-0.5" style={{ backgroundColor: '#697565' }}></div>
                 <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold" style={{ color: '#3C3D37' }}>
-                  Développeur Full Stack
+                  Software Developer Student
                 </h2>
               </div>
               
@@ -111,8 +111,8 @@ function Hero() {
                 style={{ backgroundColor: '#3C3D37' }}
               >
                 <img 
-                  src="./KarimPic.png" 
-                  alt="Mohamedkarim Kribi - Développeur Full Stack" 
+                  src="/WhatsApp Image 2026-01-26 at 13.13.40 (2).jpeg" 
+                  alt="Mohamed Karim KRIBI" 
                   className="w-full h-full object-cover"
                 />
                 

@@ -4,10 +4,9 @@ import project3 from "../assets/projects/AgroConnect.png";
 import project4 from "../assets/projects/TrainHub..png";
 import { link } from "motion/react-client";
 
-export const HERO_CONTENT = `Technicien spécialisé en systèmes automatisés et développement Digital, spécialisé en HTML, CSS, JavaScript, REACT JS, ainsi qu'en technologies back-end telles que PHP, LARAVEL et SQL. Je suis curieux, dynamique, enthousiaste et désireux de compléter ma formation et de relever de nouveaux défis. `;
+export const HERO_CONTENT = `I am a passionate Software Developer Student specializing in building modern web applications. With a strong foundation in both frontend and backend technologies, I focus on creating seamless, high-performance user experiences. My expertise spans across React, Next.js, Laravel, and SQL, and I am always eager to tackle new challenges and learn cutting-edge tools.`;
 
-export const ABOUT_TEXT = `
-Je suis un développeur full stack dévoué et polyvalent, passionné par la création d'applications Web efficaces et conviviales. J'ai travaillé avec une variété de technologies, notamment React, MySQL, Laravel, Tailwind et MongoDB. Mon parcours dans le développement Web a commencé par une profonde curiosité pour le fonctionnement des choses, et il a évolué vers une carrière où je m'efforce continuellement d'apprendre et de m'adapter à de nouveaux défis. Je m'épanouis dans des environnements collaboratifs et j'aime résoudre des problèmes complexes pour fournir des solutions de haute qualité. En dehors du codage, j'aime rester actif, explorer de nouvelles technologies et contribuer à des projets open source.`;
+export const ABOUT_TEXT = `As a dedicated Software Developer Student, I bring a mix of creative problem-solving and technical proficiency to every project. My journey in the digital world began with a deep curiosity about how complex systems work, which led me to dive into technologies like React, Tailwind CSS, and Laravel. I thrive in collaborative environments where I can apply my skills to build meaningful solutions that positively impact users. Beyond coding, I'm constantly exploring the latest trends in software engineering and working on improving my craft.`;
 
 export const EXPERIENCES = [
   {

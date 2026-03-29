@@ -7,7 +7,7 @@ const About = () => {
   return (
     <section 
       id="about" 
-      className="py-20 px-6" 
+      className="py-12 sm:py-20 px-4 sm:px-6" 
       style={{ backgroundColor: '#181C14' }}
     >
       <div className="max-w-7xl mx-auto">
@@ -16,26 +16,26 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <div className="flex items-center justify-center mb-4">
-            <div className="w-12 h-0.5 mr-4" style={{ backgroundColor: '#697565' }}></div>
-            <FaUser className="text-2xl" style={{ color: '#697565' }} />
-            <div className="w-12 h-0.5 ml-4" style={{ backgroundColor: '#697565' }}></div>
+            <div className="w-8 sm:w-12 h-0.5 mr-4" style={{ backgroundColor: '#697565' }}></div>
+            <FaUser className="text-xl sm:text-2xl" style={{ color: '#697565' }} />
+            <div className="w-8 sm:w-12 h-0.5 ml-4" style={{ backgroundColor: '#697565' }}></div>
           </div>
-          <h2 className='text-5xl lg:text-6xl font-bold' style={{ color: '#ECDFCC' }}>
-            À propos
-            <span className='block text-4xl lg:text-5xl mt-2' style={{ color: '#697565' }}>
-              de Moi
+          <h2 className='text-4xl sm:text-5xl lg:text-6xl font-bold' style={{ color: '#ECDFCC' }}>
+            About
+            <span className='block text-3xl sm:text-4xl lg:text-5xl mt-2' style={{ color: '#697565' }}>
+              Me
             </span>
           </h2>
-          <p className="mt-4 text-lg" style={{ color: '#3C3D37' }}>
-            Découvrez mon parcours et ma passion pour le développement
+          <p className="mt-4 text-base sm:text-lg" style={{ color: '#3C3D37' }}>
+            Discover my journey and passion for development
           </p>
         </motion.div>
 
         {/* Main Content */}
-        <div className='grid lg:grid-cols-2 gap-16 items-center'>
+        <div className='grid lg:grid-cols-2 gap-12 lg:gap-16 items-center'>
           
           {/* Image Section */}
           <motion.div 
@@ -45,32 +45,26 @@ const About = () => {
             className='relative'
           >
             <div className='relative flex items-center justify-center'>
-              {/* Decorative elements */}
               <div 
-                className="absolute -top-6 -left-6 w-20 h-20 rounded-2xl opacity-30"
+                className="absolute -top-6 -left-6 w-20 h-20 rounded-2xl opacity-30 hidden sm:block"
                 style={{ backgroundColor: '#697565' }}
               ></div>
               <div 
-                className="absolute -bottom-4 -right-4 w-16 h-16 rounded-full opacity-40"
+                className="absolute -bottom-4 -right-4 w-16 h-16 rounded-full opacity-40 hidden sm:block"
                 style={{ backgroundColor: '#3C3D37' }}
               ></div>
               
-              {/* Main image container */}
               <div 
-                className="relative rounded-3xl overflow-hidden shadow-2xl p-2"
-                style={{ backgroundColor: '#3C3D37' }}
+                className="relative rounded-3xl overflow-hidden shadow-2xl p-2 bg-[#3C3D37]"
               >
                 <img 
-                  className="rounded-2xl w-full max-w-md h-auto object-cover"
+                  className="rounded-2xl w-full max-w-sm sm:max-w-md h-auto object-cover"
                   src="/Karim2.jpg" 
-                  alt="Mohamedkarim Kribi - À propos" 
+                  alt="Mohamed Karim KRIBI - About" 
                 />
-                
-                {/* Gradient overlay */}
                 <div className="absolute inset-2 rounded-2xl bg-gradient-to-t from-black/10 to-transparent pointer-events-none"></div>
               </div>
 
-              {/* Floating badge */}
               <motion.div
                 animate={{ 
                   y: [0, -8, 0],
@@ -81,11 +75,10 @@ const About = () => {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="absolute -top-4 -right-4 px-4 py-2 rounded-full shadow-lg flex items-center gap-2"
-                style={{ backgroundColor: '#ECDFCC', color: '#181C14' }}
+                className="absolute -top-4 -right-2 sm:-right-4 px-3 sm:px-4 py-1 sm:py-2 rounded-full shadow-lg flex items-center gap-2 bg-[#ECDFCC] text-[#181C14]"
               >
-                <FaCode className="text-sm" />
-                <span className="text-sm font-semibold">Dev</span>
+                <FaCode className="text-xs" />
+                <span className="text-xs sm:text-sm font-semibold">Dev</span>
               </motion.div>
             </div>
           </motion.div>
@@ -97,19 +90,18 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className='space-y-8'
           >
-            {/* Text Content */}
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div 
                   className="w-1 h-16 rounded-full mt-2 hidden lg:block"
                   style={{ backgroundColor: '#697565' }}
                 ></div>
-                <div className='lg:text-left text-center'>
-                  <h3 className="text-2xl font-semibold mb-3" style={{ color: '#ECDFCC' }}>
-                    Mon Histoire
+                <div className='lg:text-left text-center w-full'>
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-3" style={{ color: '#ECDFCC' }}>
+                    My Story
                   </h3>
                   <p 
-                    className='text-lg leading-relaxed'
+                    className='text-base sm:text-lg leading-relaxed'
                     style={{ color: '#697565' }}
                   >
                     {ABOUT_TEXT}
@@ -118,10 +110,9 @@ const About = () => {
               </div>
             </div>
 
-            {/* Skills highlight */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div 
-                className="p-4 rounded-xl border-2 border-opacity-30"
+                className="p-4 rounded-xl border-2 border-opacity-30 flex flex-col items-center sm:items-start"
                 style={{ 
                   backgroundColor: 'rgba(60, 61, 55, 0.3)',
                   borderColor: '#3C3D37'
@@ -136,7 +127,7 @@ const About = () => {
                 </p>
               </div>
               <div 
-                className="p-4 rounded-xl border-2 border-opacity-30"
+                className="p-4 rounded-xl border-2 border-opacity-30 flex flex-col items-center sm:items-start"
                 style={{ 
                   backgroundColor: 'rgba(60, 61, 55, 0.3)',
                   borderColor: '#3C3D37'
@@ -147,12 +138,11 @@ const About = () => {
                   Innovation
                 </h4>
                 <p className="text-sm" style={{ color: '#697565' }}>
-                  Solutions créatives
+                  Creative Solutions
                 </p>
               </div>
             </div>
 
-            {/* Download CV Button */}
             <motion.div
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: 30 }}
@@ -162,48 +152,30 @@ const About = () => {
               <a
                 href="./MyCV.pdf"
                 download
-                className="group inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl border-2 relative overflow-hidden"
-                style={{ 
-                  backgroundColor: '#697565',
-                  color: '#ECDFCC',
-                  borderColor: '#697565'
-                }}
-                onMouseEnter={(e) => {
-                  e.target.style.backgroundColor = 'transparent';
-                  e.target.style.color = '#697565';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.backgroundColor = '#697565';
-                  e.target.style.color = '#ECDFCC';
-                }}
+                className="group inline-flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl border-2 relative overflow-hidden bg-[#697565] text-[#ECDFCC] border-[#697565] hover:bg-transparent hover:text-[#697565]"
               >
                 <FaDownload className="text-xl group-hover:animate-bounce" />
-                <span>Télécharger le CV</span>
-                
-                {/* Hover effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                <span>Download CV</span>
               </a>
 
-              {/* Additional info */}
-              <p className="mt-3 text-sm flex items-center gap-2" style={{ color: '#3C3D37' }}>
+              <p className="mt-3 text-sm flex items-center gap-2 justify-center lg:justify-start" style={{ color: '#3C3D37' }}>
                 <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#697565' }}></span>
-                Format PDF • Mise à jour récente
+                PDF Format • Updated recently
               </p>
             </motion.div>
           </motion.div>
         </div>
 
-        {/* Bottom decorative line */}
         <motion.div
           whileInView={{ opacity: 1, scaleX: 1 }}
           initial={{ opacity: 0, scaleX: 0 }}
           transition={{ duration: 1, delay: 0.8 }}
-          className="mt-20 h-0.5 w-full max-w-md mx-auto"
+          className="mt-16 sm:mt-20 h-0.5 w-full max-w-md mx-auto"
           style={{ backgroundColor: '#3C3D37' }}
         ></motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;

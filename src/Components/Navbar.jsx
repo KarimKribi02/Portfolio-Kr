@@ -1,29 +1,33 @@
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa";
-import { motion } from "motion/react";
+import React, { useState } from "react";
+import { FaLinkedin, FaGithub, FaInstagram, FaBars, FaTimes } from "react-icons/fa";
+import { motion, AnimatePresence } from "motion/react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const socialLinks = [
     {
       href: "https://www.linkedin.com/in/mohamed-karim-kribi-31b30b248/",
       icon: FaLinkedin,
       label: "LinkedIn",
-      color: "#0077B5"
     },
     {
       href: "https://github.com/KarimKribi02",
       icon: FaGithub,
       label: "GitHub",
-      color: "#333"
     },
     {
       href: "https://www.instagram.com/krm_02/",
       icon: FaInstagram,
       label: "Instagram",
-      color: "#E4405F"
     }
+  ];
+
+  const navLinks = [
+    { to: "/", label: "Home" },
+    { to: "/projects", label: "Projects" },
+    { to: "/contact", label: "Contact" },
   ];
 
   return (
@@ -31,104 +35,101 @@ const Navbar = () => {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 px-6 py-4 backdrop-blur-md border-b border-opacity-20"
-      style={{ 
-        backgroundColor: 'rgba(24, 28, 20, 0.9)',
-        borderColor: '#3C3D37'
-      }}
+      className="fixed top-0 left-0 right-0 z-50 px-6 py-4 backdrop-blur-md border-b border-opacity-20 bg-[#181C14]/90 border-[#3C3D37]"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         
         {/* Logo Section */}
-        <motion.div 
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex items-center group"
-        >
-          
-          
-          {/* Name/Brand - Supprimé */}
-          {/* Name/Brand */}
-          <div className="ml-3 hidden sm:block">
-            <h1 className="text-lg font-bold" style={{ color: '#ECDFCC' }}>
-              MK
-            </h1>
-            <p className="text-xs -mt-1" style={{ color: '#697565' }}>
-              Portfolio
-            </p>
+        <Link to="/" className="flex items-center group">
+          <div className="ml-0">
+            <h1 className="text-xl font-bold text-[#ECDFCC]">MK</h1>
+            <p className="text-[10px] -mt-1 text-[#697565]">Portfolio</p>
           </div>
-        
-        </motion.div>
+        </Link>
 
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <Link 
+              key={link.to}
+              to={link.to} 
+              className="text-sm font-medium transition-colors hover:text-[#ECDFCC] text-[#697565]"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
 
-
-        {/* Social Links */}
-        <motion.div 
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="flex items-center gap-4"
-        >
+        {/* Social Links (Desktop) */}
+        <div className="hidden md:flex items-center gap-4">
           {socialLinks.map((social, index) => {
             const IconComponent = social.icon;
             return (
-              <motion.a
+              <a
                 key={social.label}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ 
-                  duration: 0.4, 
-                  delay: 1 + index * 0.1,
-                  type: "spring",
-                  stiffness: 200
-                }}
-                className="relative p-2 rounded-full transition-all duration-300 hover:scale-110 hover:-translate-y-1 group"
-                style={{ 
-                  backgroundColor: 'rgba(60, 61, 55, 0.3)',
-                  color: '#697565'
-                }}
-                onMouseEnter={(e) => {
-                  e.target.style.backgroundColor = 'rgba(236, 223, 204, 0.1)';
-                  e.target.style.color = '#ECDFCC';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.backgroundColor = 'rgba(60, 61, 55, 0.3)';
-                  e.target.style.color = '#697565';
-                }}
+                className="p-2 rounded-full transition-all duration-300 hover:scale-110 hover:-translate-y-1 bg-[#3C3D37]/30 text-[#697565] hover:text-[#ECDFCC]"
                 aria-label={social.label}
               >
-                <IconComponent className="text-xl" />
-                
-                {/* Tooltip */}
-                <div 
-                  className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 px-2 py-1 rounded text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap"
-                  style={{ 
-                    backgroundColor: '#3C3D37',
-                    color: '#ECDFCC'
-                  }}
-                >
-                  {social.label}
-                  {/* Arrow */}
-                  <div 
-                    className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 rotate-45"
-                    style={{ backgroundColor: '#3C3D37' }}
-                  ></div>
-                </div>
-              </motion.a>
+                <IconComponent className="text-lg" />
+              </a>
             );
           })}
-        </motion.div>
+        </div>
 
-        {/* Mobile Menu Button - Supprimé */}
+        {/* Mobile Toggle */}
+        <button 
+          className="md:hidden text-[#ECDFCC] p-2"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </button>
       </div>
 
-
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden mt-4 overflow-hidden"
+          >
+            <div className="flex flex-col gap-4 pb-4">
+              {navLinks.map((link) => (
+                <Link 
+                  key={link.to}
+                  to={link.to} 
+                  className="text-lg font-medium text-[#697565] hover:text-[#ECDFCC] border-b border-[#3C3D37]/30 pb-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <div className="flex gap-6 pt-2">
+                {socialLinks.map((social) => {
+                  const IconComponent = social.icon;
+                  return (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-2xl text-[#697565] hover:text-[#ECDFCC]"
+                    >
+                      <IconComponent />
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
